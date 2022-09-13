@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home
+{% endblock title %}
+
+
+
+{% block content %}
+
+<h1>Home Page</h1>
+    <p>Welcome to the home page!</p>
+    <br>
+    <table class="table">
+        <tr class="table-dark">
+            <th scope="col">SQL</th>
+            <th scope="col">noSQL</th>
+        </tr>
+        <tr>
+            <td>Has a predefined schema or structre. Every input has the same attributes.</td>
+            <td>You can define your own structure. Each input can have completely different attributes.</td>
+        </tr>
+        <tr>
+            <td>Table based</td>
+            <td>Document based</td>
+        </tr>
+        <tr>
+            <td>More suited for small datapoints that are repetitive or well structured</td>
+            <td>More suited for large data that is unstructured such as documents or JSON</td>
+        </tr>
+        <tr>
+            <td>You can increase load capacity by adding more CPU or RAM</td>
+            <td>You can increase load capacity by sharding between more servers</td>
+        </tr>
+        <tr>
+            <td>Has a specific language that is consistent between all SQL databases</td>
+            <td>Each different database has its own syntax and operators</td>
+        </tr>
+
+    </table>
+
+{% endblock content %}

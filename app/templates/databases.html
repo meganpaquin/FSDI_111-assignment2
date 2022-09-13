@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Databases
+{% endblock title %}
+
+
+
+{% block content %}
+    <h1>All About SQL</h1>
+    <h3>Available options:</h3>
+    <ul>
+        <li>mySQL</li>
+        <li>Oracle</li>
+        <li>Microsoft SQL</li>
+        <li>PstgreSQL</li>
+        <li>Amazon Relational Database Service</li>
+    </ul>
+
+    <h4>SQL is a language that is consistent across the above platforms. This standardizes how to add, read, change, and delete data. You only have to learn the process once to use all SQL databases</h4>
+    <ol>
+        <li>Create a new table</li>
+            <pre>
+                <code>
+                    sqlite> CREATE TABLE user(
+                        ...> id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        ...> first_name VARCHAR(45),
+                        ...> last_name VARCHAR(45),
+                        ...> hobbies TEXT);
+                </code>
+            </pre>
+        <li>Add data to a table</li>
+            <pre>
+                <code>
+                    sqlite> INSERT INTO user(
+                        ...> first_name,
+                        ...> last_name,
+                        ...> hobbies
+                        ...> ) VALUES (
+                        ...> "Megan",
+                        ...> "Paquin",
+                        ---> "Crafts");
+                </code>
+            </pre>
+        <li>Update data in a table</li>
+            <pre>
+                <code>
+                    sqlite> UPDATE user SET hobbies="Hiking" WHERE id=1;
+                </code>
+            </pre>
+        <li>Read data from a table</li>
+            <pre>
+                <code>
+                    sqlite> SELECT * FROM user WHERE last_name="Paquin";
+                </code>
+            </pre>
+        <li>Delete data from a table</li>
+            <pre>
+                <code>
+                    sqlite> DELETE FROM user WHERE id=3;
+                </code>
+            </pre>
+    </ol>
+{% endblock content %}
